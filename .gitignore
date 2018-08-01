@@ -229,3 +229,6 @@ uCore/uCore.xcworkspace
 
 uUI/uUI.xcodeproj
 uUI/uUI.xcworkspace
+
+uTesting/uTesting.xcodeproj
+uTesting/uTesting.xcworkspace
