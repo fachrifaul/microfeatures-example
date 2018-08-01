@@ -226,3 +226,6 @@ Carthage/
 
 uCore/uCore.xcodeproj
 uCore/uCore.xcworkspace
+
+uUI/uUI.xcodeproj
+uUI/uUI.xcworkspace
