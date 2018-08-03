@@ -1,5 +1,5 @@
 import XCTest
-@testable import ufeatures
+@testable import App
 
 class ufeaturesTests: XCTestCase {
     
