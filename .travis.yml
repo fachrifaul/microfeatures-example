@@ -14,3 +14,6 @@ script:
   - make test-search
   - make test-home
   - make test-app
+addons:
+  ssh_known_hosts:
+    - github.com
