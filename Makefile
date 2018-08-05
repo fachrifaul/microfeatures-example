@@ -1,14 +1,13 @@
 DESTINATION = "platform=iOS Simulator,name=iPhone 6,OS=11.4"
 
 bootstrap:
-	bundle install
-	bundle exec pod install
-	eval "$(curl -sL https://bit.ly/2JWMfx8)"
-	carthage update --platform iOS;
-fetch-dependencies:
-	carthage update --platform iOS;
-generate-projects:
+	bundle install;
+	eval "$(curl -sL https://bit.ly/2JWMfx8)";
+generate-project:
 	tuist generate;
+dependencies:
+	carthage update --platform iOS;	
+	bundle exec pod install;
 build-core:
 	xcodebuild -workspace uFeatures.xcworkspace -scheme uCore -config Debug clean build
 build-ui:
