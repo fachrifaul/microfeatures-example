@@ -2,7 +2,7 @@ DESTINATION = "platform=iOS Simulator,name=iPhone 6,OS=11.4"
 
 bootstrap:
 	bundle install;
-	brew tap tuist/tuist git@github.com:tuist/tuist.git;
+	brew tap tuist/tuist https://github.com/tuist/tuist.git;
 	brew install tuist;
 generate-project:
 	tuist generate;
