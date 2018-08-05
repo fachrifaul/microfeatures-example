@@ -5,7 +5,11 @@ osx_image: xcode9
 install:
   - make bootstrap
 script:
+  - make generate-projects
   - make build-app
-  - make build-examples
+  - make test-core
+  - make test-ui
+  - make test-testing
+  - make test-search
+  - make test-home
   - make test-app
-  - make test-features
