@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    macos:
+      xcode: "9.4.0"
+    steps:
+      - checkout
+      - run:
+          name: Bootstrap
+          command: |
+            make bootstrap
+      - run:
+          name: Fetch Carthage dependencies
+          command: |
+            make carthage-fetch
+      - run:
+          name: Generate Project
+          command: |
+            make generate-project
+      - run:
+          name: Fetch CocoaPods dependencies
+          command: |
+            make cocoapods-fetch
+      - run:
+          name: Build and run tests
+          command: |
+            make build-app
+            make test-core
+            make test-ui
+            make test-testing
+            make test-search
+            make test-home
+            make test-app
