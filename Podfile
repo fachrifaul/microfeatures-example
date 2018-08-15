@@ -1,12 +1,15 @@
-target 'ufeatures' do
+project "App/uFeatures.xcodeproj"
+workspace "uFeatures.xcworkspace"
+use_frameworks!
+platform :ios
 
-  use_frameworks!
+target 'App' do
 
-  target 'ufeaturesTests' do
+  target 'AppTests' do
     inherit! :search_paths
   end
 
-  target 'ufeaturesUITests' do
+  target 'AppUITests' do
     inherit! :search_paths
   end
 

@@ -5,8 +5,9 @@ osx_image: xcode9.4
 install:
   - make bootstrap
 script:
+  - make carthage-fetch
   - make generate-project
-  - make dependencies
+  - make cocoapods-fetch
   - make build-app
   - make test-core
   - make test-ui

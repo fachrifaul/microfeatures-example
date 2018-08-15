@@ -9,7 +9,7 @@ let project = Project(name: "uCore",
                                infoPlist: "Info.plist",
                                sources: "Sources/**",
                                dependencies: [
-                                // .framework(path: "../Carthage/iOS/RxSwift.framework")
+                                  .framework(path: "../Carthage/Build/iOS/RxSwift.framework")
                                 ]),
                         Target(name: "uCoreTests",
                                platform: .iOS,

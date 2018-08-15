@@ -6,8 +6,9 @@ bootstrap:
 	brew install tuist;
 generate-project:
 	tuist generate;
-dependencies:
+carthage-fetch:
 	carthage update --platform iOS;	
+setup-project: generate-project
 	bundle exec pod install;
 sha-256:
 	shasum -a 256 bin/tuistenv;
