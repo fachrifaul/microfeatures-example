@@ -14,13 +14,9 @@ jobs:
           command: |
             make carthage-fetch
       - run:
-          name: Generate Project
+          name: Setup Project
           command: |
-            make generate-project
-      - run:
-          name: Fetch CocoaPods dependencies
-          command: |
-            make cocoapods-fetch
+            make setup-project
       - run:
           name: Build and run tests
           command: |
